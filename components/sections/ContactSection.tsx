@@ -30,15 +30,15 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contato" className="relative py-24 md:py-32">
+    <section id="contacto" className="relative py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(0,255,136,0.06)_0%,transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <SectionHeading
-          badge="Contato"
+          badge="Contacto"
           title="Vamos construir algo"
           highlight="incrível?"
-          description="Entre em contato e descubra como podemos transformar o seu negócio com tecnologia de ponta."
+          description="Entre em contacto e descubra como podemos transformar o seu negócio com tecnologia de ponta."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
@@ -46,7 +46,7 @@ export default function ContactSection() {
           <AnimatedSection className="lg:col-span-2 space-y-8">
             <div>
               <h3 className="font-display font-semibold text-xl text-text-primary mb-6">
-                Informações de Contato
+                Informações de Contacto
               </h3>
 
               <div className="space-y-5">
@@ -84,7 +84,8 @@ export default function ContactSection() {
                   <div>
                     <div className="text-sm font-medium text-text-primary">Endereço</div>
                     <div className="text-sm text-text-secondary">
-                      Luanda, Angola
+                      Vila Residencial do Gamek, AL-D03
+                      
                     </div>
                   </div>
                 </div>

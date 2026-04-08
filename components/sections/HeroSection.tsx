@@ -91,7 +91,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#contato"
+            href="#contacto"
             className="group relative px-8 py-4 rounded-xl bg-primary hover:bg-primary-light text-white font-semibold text-base transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 flex items-center gap-2"
           >
             Fale Conosco

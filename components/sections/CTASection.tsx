@@ -36,7 +36,7 @@ export default function CTASection() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#contato"
+                  href="#contacto"
                   className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary hover:bg-primary-light text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
                 >
                   Agendar Consultoria

@@ -12,7 +12,7 @@ const navLinks = [
   { label: "Serviços", href: "#servicos" },
   { label: "Projetos", href: "#projetos" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Contato", href: "#contato" },
+  { label: "Contacto", href: "#contacto" },
 ];
 
 export default function Navbar() {
@@ -60,7 +60,7 @@ export default function Navbar() {
           ))}
           <ThemeToggle />
           <a
-            href="#contato"
+            href="#contacto"
             className="ml-2 px-5 py-2.5 text-sm font-semibold rounded-lg bg-primary hover:bg-primary-light text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
           >
             Fale Conosco
@@ -103,7 +103,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <a
-                href="#contato"
+                href="#contacto"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 px-5 py-3 text-sm font-semibold rounded-lg bg-primary hover:bg-primary-light text-white text-center transition-all duration-300"
               >

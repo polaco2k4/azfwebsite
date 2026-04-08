@@ -15,7 +15,7 @@ const footerLinks = {
     { label: "Sobre Nós", href: "#sobre" },
     { label: "Projetos", href: "#projetos" },
     { label: "Equipe", href: "#sobre" },
-    { label: "Contato", href: "#contato" },
+    { label: "Contacto", href: "#contacto" },
   ],
   social: [
     { label: "LinkedIn", href: "https://linkedin.com" },
@@ -65,6 +65,7 @@ export default function Footer() {
               </a>
               <span className="flex items-center gap-2 text-sm text-text-secondary">
                 <MapPin className="w-4 h-4" />
+                Vila Residencial do Gamek, AL-D03
                 Luanda, Angola
               </span>
             </div>
