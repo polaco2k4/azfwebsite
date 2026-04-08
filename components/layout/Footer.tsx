@@ -57,7 +57,7 @@ export default function Footer() {
                 contacto@azfbusiness.ao
               </a>
               <a
-                href="tel:+244923456789"
+                href="tel:+244935415626"
                 className="flex items-center gap-2 text-sm text-text-secondary hover:text-accent transition-colors"
               >
                 <Phone className="w-4 h-4" />

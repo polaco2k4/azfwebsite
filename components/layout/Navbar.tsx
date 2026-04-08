@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/shared/ThemeToggle";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -61,21 +62,25 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-primary to-accent group-hover:w-3/4 transition-all duration-300" />
             </a>
           ))}
+          <ThemeToggle />
           <a
             href="#contato"
-            className="ml-4 px-5 py-2.5 text-sm font-semibold rounded-lg bg-primary hover:bg-primary-light text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
+            className="ml-2 px-5 py-2.5 text-sm font-semibold rounded-lg bg-primary hover:bg-primary-light text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
           >
             Fale Conosco
           </a>
         </div>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden relative w-10 h-10 flex items-center justify-center text-text-primary"
-          aria-label="Menu"
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="relative w-10 h-10 flex items-center justify-center text-text-primary"
+            aria-label="Menu"
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

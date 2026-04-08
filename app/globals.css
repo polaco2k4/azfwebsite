@@ -4,19 +4,39 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-:root {
-  --bg: #06060B;
-  --surface: #0D0D15;
-  --surface-light: #14141F;
-  --border: #1E1E2E;
-  --primary: #0066FF;
-  --primary-light: #3385FF;
-  --secondary: #6366F1;
-  --accent: #00FF88;
-  --accent-dim: #00CC6A;
-  --muted: #8888AA;
-  --text-primary: #F0F0F5;
-  --text-secondary: #A0A0B8;
+:root,
+[data-theme="dark"] {
+  --bg: 6 6 11;
+  --surface: 13 13 21;
+  --surface-light: 20 20 31;
+  --border: 30 30 46;
+  --primary: 0 102 255;
+  --primary-light: 51 133 255;
+  --secondary: 99 102 241;
+  --accent: 0 204 106;
+  --accent-dim: 0 170 85;
+  --muted: 136 136 170;
+  --text-primary: 240 240 245;
+  --text-secondary: 160 160 184;
+  --grid-color: rgba(30, 30, 46, 0.5);
+  --selection-bg: rgba(0, 102, 255, 0.4);
+}
+
+[data-theme="light"] {
+  --bg: 245 247 250;
+  --surface: 255 255 255;
+  --surface-light: 238 241 246;
+  --border: 216 220 229;
+  --primary: 0 85 221;
+  --primary-light: 34 112 238;
+  --secondary: 85 88 230;
+  --accent: 0 153 92;
+  --accent-dim: 0 122 74;
+  --muted: 107 114 128;
+  --text-primary: 17 24 39;
+  --text-secondary: 75 85 99;
+  --grid-color: rgba(200, 205, 215, 0.5);
+  --selection-bg: rgba(0, 85, 221, 0.25);
 }
 
 * {
@@ -30,15 +50,19 @@ html {
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text-primary);
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text-primary));
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: rgba(0, 102, 255, 0.4);
-  color: #fff;
+  background-color: var(--selection-bg);
+  color: rgb(var(--text-primary));
+}
+
+[data-theme="light"] ::selection {
+  color: #111827;
 }
 
 ::-webkit-scrollbar {
@@ -46,16 +70,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: rgb(var(--bg));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: rgb(var(--border));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--muted);
+  background: rgb(var(--muted));
 }
 
 @layer utilities {
@@ -97,8 +121,8 @@ body {
 
   .grid-pattern {
     background-image:
-      linear-gradient(rgba(30, 30, 46, 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(30, 30, 46, 0.5) 1px, transparent 1px);
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
