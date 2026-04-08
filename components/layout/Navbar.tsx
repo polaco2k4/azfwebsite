@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/shared/ThemeToggle";
+import { useTheme } from "@/components/shared/ThemeProvider";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -17,6 +18,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -37,18 +39,12 @@ export default function Navbar() {
       )}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2 group">
-          <div className="relative w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary/30 transition-shadow duration-300">
-            <Zap className="w-5 h-5 text-background" strokeWidth={2.5} />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display font-bold text-xl tracking-tight text-text-primary">
-              AZF
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted leading-none">
-              Tech & Innovation
-            </span>
-          </div>
+        <a href="#inicio" className="flex items-center group">
+          <img 
+            src={theme === "dark" ? "/logo-dark.png" : "/logo.png"}
+            alt="AZF - Tecnologia & Inovação" 
+            className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-1">
