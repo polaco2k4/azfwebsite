@@ -43,7 +43,7 @@ export default function CTASection() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
-                  href="https://wa.me/244923456789"
+                  href="https://wa.me/244935415626"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-accent/30 text-accent hover:bg-accent/5 font-semibold transition-all duration-300"
